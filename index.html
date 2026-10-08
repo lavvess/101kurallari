@@ -11,6 +11,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -97,10 +101,13 @@
             line-height: 1.7;
         }
 
-        .empty {
-            text-align: center;
-            color: #999999;
-            padding: 30px;
+        .example {
+            background: #252525;
+            border-left: 4px solid #ffffff;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            color: #dddddd;
         }
 
         footer {
@@ -109,8 +116,19 @@
             color: #666666;
         }
 
-        html {
-            scroll-behavior: smooth;
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            section h2 {
+                font-size: 27px;
+            }
+
+            .menu a {
+                width: 100%;
+                max-width: 350px;
+            }
         }
     </style>
 </head>
@@ -229,6 +247,14 @@
         </p>
     </div>
 
+    <div class="rule">
+        <h3>11. Yerdeki Okeyi Almak</h3>
+        <p>
+            Açılan elde yerdeki okey alındıktan sonra, oyun bitmeden
+            okey elimizde kalırsa 101 ceza yenilir.
+        </p>
+    </div>
+
 </section>
 
 
@@ -236,8 +262,55 @@
 
     <h2>🀄 El Açma</h2>
 
-    <div class="empty">
-        <p>El açma kuralları yakında eklenecek.</p>
+    <div class="rule">
+        <h3>1. Seri Açma</h3>
+        <p>
+            Seri açmanın minimum değeri 101'dir.
+            33 yan 2 hesabı kullanılır.
+        </p>
+    </div>
+
+    <div class="rule">
+        <h3>2. Çift Açma</h3>
+        <p>
+            Çift açmanın minimumu 5 çift + 1 perdür.
+        </p>
+    </div>
+
+    <div class="rule">
+        <h3>3. 5 Çiftten Fazla Çift</h3>
+        <p>
+            Çift sayısı 5'ten büyükse 1 per koymak isteğe bağlıdır.
+        </p>
+    </div>
+
+    <div class="rule">
+        <h3>4. Çift Açarken Gösterge</h3>
+        <p>
+            Çift açarken gösterge varsa kullanılır.
+        </p>
+    </div>
+
+    <div class="rule">
+        <h3>5. Çift Açıldıktan Sonra Gösterge Atılması</h3>
+        <p>
+            Biri çift açtıktan sonra gösterge atılırsa 101 ceza yenilir.
+        </p>
+    </div>
+
+    <div class="rule">
+        <h3>6. Katlamalı Eşli Oyun</h3>
+        <p>
+            Kendi eşinizden daha yüksek açmanız gerekmez.
+            Ancak diğer takımdan sonra açıyorsanız,
+            diğer takımın açtığı sayıdan daha yüksek açmanız gerekir.
+        </p>
+
+        <div class="example">
+            <strong>Örnek:</strong><br><br>
+            Diğer takım henüz açmadıysa ve eşiniz 37 açtıysa,
+            siz 35 açabilirsiniz.
+        </div>
     </div>
 
 </section>
@@ -247,8 +320,11 @@
 
     <h2>📊 Puanlama</h2>
 
-    <div class="empty">
-        <p>Puanlama kuralları yakında eklenecek.</p>
+    <div class="rule">
+        <h3>Puanlama Kuralları</h3>
+        <p>
+            Puanlama kuralları yakında eklenecek.
+        </p>
     </div>
 
 </section>
