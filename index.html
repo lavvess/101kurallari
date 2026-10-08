@@ -3,367 +3,801 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>101 Okey Kuralları</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
 
-    html {
-        scroll-behavior: smooth;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #111;
-        color: #f5f5f5;
-        line-height: 1.6;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    header {
-        text-align: center;
-        padding: 50px 20px 30px;
-        background: #181818;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 55px 20px 35px;
+    background: #181818;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 38px;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* ANA MENÜ */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 25px 15px;
+    background: #151515;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    background: #242424;
+    padding: 13px 18px;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+/* BÖLÜMLER */
+
+section {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 0 20px;
+    scroll-margin-top: 80px;
+}
+
+section > h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* ALT BAŞLIKLAR */
+
+.sub-title {
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* KURAL KARTLARI */
+
+.rule {
+    background: #1d1d1d;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 14px;
+    border: 1px solid #292929;
+}
+
+.rule strong {
+    color: #fff;
+}
+
+/* ÖRNEK */
+
+.example {
+    background: #191919;
+    border-left: 4px solid #666;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    color: #ccc;
+}
+
+/* FOTOĞRAF */
+
+.rule-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 18px auto 5px;
+    border-radius: 12px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    color: #777;
+}
+
+/* TELEFON */
+
+@media (max-width: 600px) {
 
     header h1 {
-        margin: 0;
-        font-size: 36px;
-    }
-
-    header p {
-        color: #aaa;
-        margin-top: 10px;
+        font-size: 28px;
     }
 
     .menu {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-        padding: 25px 15px;
-        background: #151515;
+        flex-direction: column;
+        position: static;
     }
 
     .menu a {
-        text-decoration: none;
-        color: white;
-        background: #242424;
-        padding: 14px 20px;
-        border-radius: 12px;
-        transition: 0.2s;
-    }
-
-    .menu a:hover {
-        background: #333;
-        transform: translateY(-2px);
+        text-align: center;
     }
 
     section {
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 0 20px;
-        scroll-margin-top: 20px;
+        margin: 35px auto;
     }
 
-    section h2 {
-        font-size: 28px;
-        margin-bottom: 20px;
+    section > h2 {
+        font-size: 26px;
     }
 
-    .rule {
-        background: #1d1d1d;
-        border-radius: 12px;
-        padding: 18px;
-        margin-bottom: 14px;
-        border: 1px solid #292929;
+    .sub-title {
+        font-size: 20px;
     }
+}
 
-    .rule strong {
-        color: #fff;
-    }
-
-    .example {
-        background: #191919;
-        border-left: 4px solid #555;
-        padding: 15px;
-        margin-top: 15px;
-        border-radius: 8px;
-        color: #ccc;
-    }
-
-    .rule-image {
-        width: 100%;
-        margin-top: 15px;
-        border-radius: 10px;
-        display: block;
-    }
-
-    footer {
-        text-align: center;
-        padding: 40px 20px;
-        color: #777;
-    }
-
-    @media (max-width: 600px) {
-        header h1 {
-            font-size: 28px;
-        }
-
-        .menu {
-            flex-direction: column;
-        }
-
-        .menu a {
-            text-align: center;
-        }
-    }
 </style>
 </head>
 
+
 <body>
 
+
 <header>
+
     <h1>🀄 101 Okey Kuralları</h1>
-    <p>Oyunun kuralları, el açma ve puanlama</p>
+
+    <p>
+        Oyunun kuralları, el açma ve puanlama
+    </p>
+
 </header>
 
+
 <nav class="menu">
-    <a href="#oyunun-kurallari">🎮 Oyunun Kuralları</a>
-    <a href="#el-acma">🀄 El Açma</a>
-    <a href="#yeni-kurallar">✨ Yeni Kurallar</a>
-    <a href="#puanlama">📊 Puanlama</a>
+
+    <a href="#oyunun-kurallari">
+        🎮 Oyunun Kuralları
+    </a>
+
+    <a href="#el-acma">
+        🀄 El Açma
+    </a>
+
+    <a href="#puanlama">
+        📊 Puanlama ve Cezalar
+    </a>
+
 </nav>
 
 
+
+<!-- ================================================= -->
+<!-- 1. OYUNUN KURALLARI -->
+<!-- ================================================= -->
+
 <section id="oyunun-kurallari">
 
-    <h2>🎮 Oyunun Kuralları</h2>
+<h2>🎮 Oyunun Kuralları</h2>
 
-    <div class="rule">
-        <strong>1.</strong> 4 kişi oynanır.
-    </div>
 
-    <div class="rule">
-        <strong>2.</strong> Seride 101 (33 yan 2), çiftte 5 çift + 1 per olduğunda açılabilir.
-        Çift açılırken 5 çifte 1 per koymak zorunlu.
-        5 çiftten fazla çiftlerde isteğe bağlı olarak 1 per konulabilir.
-    </div>
+<h3 class="sub-title">
+👥 Oyuncular ve Taş Dağıtımı
+</h3>
 
-    <div class="rule">
-        <strong>3.</strong> Seride, bizden önceki kişinin attığı taş işe yarıyorsa,
-        alınan taşın 10 katı kadar ceza yazılır; çiftte 20 katı kadar yazılır.
-    </div>
+<div class="rule">
 
-    <div class="rule">
-        <strong>4.</strong> Perler yere indirilirken masaya değdikten sonra değiştirilemez.
-    </div>
+<strong>1.</strong>
+101 Okey 4 kişi oynanır.
 
-    <div class="rule">
-        <strong>5.</strong> Atılan taş masaya değdikten sonra değiştirilemez.
-    </div>
+</div>
 
-    <div class="rule">
-        <strong>6.</strong> Gösterge çift açılırken 1 çift olarak kabul edilir.
-        Yanına kesinlikle başka taş konulmadan masadaki göstergenin yanına konulur.
-    </div>
 
-    <div class="rule">
-        <strong>7.</strong> Eşli oyunlarda okeyi pere koyarken takım arkadaşına kaş/göz yapılmamalı.
-        “Bu sende mi?” gibi sorular sorulmamalı. Aksi durumda 101 ceza yenilir.
-    </div>
+<div class="rule">
 
-    <div class="rule">
-        <strong>8.</strong> El 101 olmadığı takdirde elden bitilemez.
-    </div>
+<strong>2.</strong>
+Her oyuncuya 21 taş dağıtılır.
+Oyuna ilk başlayacak oyuncuya fazladan 1 taş verilir.
+Böylece ilk başlayacak oyuncu 22 taşla oyuna başlar ve taş çekmeden ilk elini oynar.
 
-    <div class="rule">
-        <strong>9.</strong> Yanlış el açılması durumunda biri fark ederse 101 ceza yenilir.
-        Kimse fark etmezse oyuna devam edilir.
-    </div>
+</div>
 
-    <div class="rule">
-        <strong>10.</strong> Okey oynamaya gidildiğinde önemli bir durum olmadıkça oyun yarıda bırakılıp gidilemez.
-        10 el de oynanılmalı. Son el hesap elidir; isteğe bağlı, puanlar yakınsa oynanılır.
-    </div>
+
+
+<h3 class="sub-title">
+🎲 Genel Oyun Kuralları
+</h3>
+
+
+<div class="rule">
+
+<strong>3.</strong>
+Perler yere indirilirken masaya değdikten sonra değiştirilemez.
+
+</div>
+
+
+<div class="rule">
+
+<strong>4.</strong>
+Atılan taş masaya değdikten sonra değiştirilemez.
+
+</div>
+
+
+<div class="rule">
+
+<strong>5.</strong>
+Okey oynamaya gidildiğinde önemli bir durum olmadıkça oyun yarıda bırakılıp gidilemez.
+10 el oynanmalıdır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>6.</strong>
+Son el hesap elidir.
+Puanlar birbirine yakınsa isteğe bağlı olarak oynanabilir.
+
+</div>
+
+
+
+<h3 class="sub-title">
+🚫 Yasak Per
+</h3>
+
+
+<div class="rule">
+
+<strong>7.</strong>
+Oyunda 12-13-1 şeklinde per yapılamaz.
+
+</div>
+
+
+
+<h3 class="sub-title">
+🟢 Gösterge
+</h3>
+
+
+<div class="rule">
+
+<strong>8.</strong>
+Gösterge çift açılırken 1 çift olarak kabul edilir.
+Yanına kesinlikle başka taş konulmadan masadaki göstergenin yanına konulur.
+
+</div>
+
+
+
+<h3 class="sub-title">
+🃏 İşlek Taşlar
+</h3>
+
+
+<div class="rule">
+
+<strong>9.</strong>
+Atılan taş yerdeki bir seriye işliyorsa bu taşı atan oyuncu ceza alır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>10.</strong>
+İşlek taşın cezalı olabilmesi için rakip oyuncunun taşın işlek olduğunu fark edip
+<strong>“İşlek!”</strong> demesi gerekir.
+
+</div>
+
+
+<div class="rule">
+
+<strong>11.</strong>
+Rakip oyuncular taşın işlek olduğunu fark etmeden ortadan taş almışsa ceza verilmez.
+
+</div>
+
+
+<div class="rule">
+
+<strong>12.</strong>
+Yere atılan işlek taş diğer oyuncu tarafından alınabilir.
+
+</div>
+
+
+
+<h3 class="sub-title">
+🃏 Okey Kuralları
+</h3>
+
+
+<div class="rule">
+
+<strong>13.</strong>
+Okey her zaman işlek kabul edilir.
+Bu nedenle yanlışlıkla okey atan oyuncu ceza alır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>14.</strong>
+Yere henüz hiçbir taş açılmamış olsa bile okey atan oyuncuya
+101 ceza puanı yazılır.
+
+</div>
+
+
+
+<h3 class="sub-title">
+🤝 Eşli Oyun
+</h3>
+
+
+<div class="rule">
+
+<strong>15.</strong>
+Eşli oyunlarda okeyi pere koyarken takım arkadaşına kaş veya göz yapılmamalıdır.
+
+“Bu sende mi?” gibi sorular sorulamaz.
+
+Aksi durumda 101 ceza yenilir.
+
+</div>
 
 </section>
 
+
+
+
+<!-- ================================================= -->
+<!-- 2. EL AÇMA -->
+<!-- ================================================= -->
 
 <section id="el-acma">
 
-    <h2>🀄 El Açma</h2>
+<h2>🀄 El Açma</h2>
 
-    <div class="rule">
-        <strong>1.</strong> Seri açmanın minimumu 101 (33 yan 2)'dir.
-    </div>
 
-    <div class="rule">
-        <strong>2.</strong> Çift açmanın minimumu 5 çift + 1 per'dir.
-    </div>
 
-    <div class="rule">
-        <strong>3.</strong> Çift sayısı 5'ten büyükse isteğe bağlı olarak 1 per konulabilir.
-    </div>
+<h3 class="sub-title">
+🔴 Seri Açma
+</h3>
 
-    <div class="rule">
-        <strong>4.</strong> Çift açarken gösterge varsa kullanılır.
-    </div>
 
-    <div class="rule">
-        <strong>5.</strong> Biri çift açtıktan sonra gösterge atılırsa 101 ceza yenilir.
-    </div>
+<div class="rule">
 
-    <div class="rule">
-        <strong>6.</strong> Katlamalı eşli oyunda kendi eşinden daha yüksek açmak gerekmez.
-        Ancak diğer takımdan sonra açıyorsan onların açtığından yüksek açmalısın.
-    </div>
+<strong>1.</strong>
+Seri açmanın minimumu 101'dir.
 
-    <div class="example">
-        <strong>Örnek:</strong> Diğer takım açmadıysa ve eşin 37 açtıysa,
-        sen 35 açabilirsin.
-    </div>
+</div>
+
+
+<div class="rule">
+
+<strong>2.</strong>
+33 yan 2 kuralı seri açılışında geçerlidir.
+
+</div>
+
+
+<div class="rule">
+
+<strong>3.</strong>
+El 101 olmadığı takdirde elden bitilemez.
+
+</div>
+
+
+<div class="rule">
+
+<strong>4.</strong>
+Yanlış el açılması durumunda biri fark ederse 101 ceza yenilir.
+Kimse fark etmezse oyuna devam edilir.
+
+</div>
+
+
+
+<h3 class="sub-title">
+🟣 Çift Açma
+</h3>
+
+
+<div class="rule">
+
+<strong>5.</strong>
+Çift açmanın minimumu 5 çift + 1 per'dir.
+
+</div>
+
+
+<div class="rule">
+
+<strong>6.</strong>
+Çift açarken 5 çifte 1 per koymak zorunludur.
+
+</div>
+
+
+<div class="rule">
+
+<strong>7.</strong>
+5 çiftten fazla çift varsa isteğe bağlı olarak 1 per konulabilir.
+
+</div>
+
+
+<div class="rule">
+
+<strong>8.</strong>
+Çift açarken gösterge varsa kullanılır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>9.</strong>
+Biri çift açtıktan sonra gösterge atılırsa 101 ceza yenilir.
+
+</div>
+
+
+<div class="rule">
+
+<strong>10.</strong>
+Çift açan oyuncu kendi elindeki serileri yere açamaz.
+
+</div>
+
+
+<div class="rule">
+
+<strong>11.</strong>
+Çift açan oyuncu diğer oyuncuların açtığı serilere taş işleyebilir.
+
+</div>
+
+
+<div class="rule">
+
+<strong>12.</strong>
+Çift açan oyuncu bir seferde en fazla 2 taş işleyebilir.
+
+</div>
+
+
+
+<h3 class="sub-title">
+↔️ Yandan Taş Alma
+</h3>
+
+
+<div class="rule">
+
+<strong>13.</strong>
+Yandan taş alan oyuncu elini açmak zorundadır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>14.</strong>
+Yandan alınan taş, el açılırken kullanılmak zorundadır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>15.</strong>
+Ancak oyuncunun elinde aldığı taşın bir eşi varsa,
+el açarken bu eşi de kullanılabilir.
+
+</div>
+
+
+
+<h3 class="sub-title">
+🟣 Çift İşleme
+</h3>
+
+
+<div class="rule">
+
+<strong>16.</strong>
+Oyunda çift açmış bir oyuncu varsa diğer oyuncular ellerindeki çiftleri
+çift açan oyuncunun çiftlerine işleyebilir.
+
+</div>
+
+
+<div class="rule">
+
+<strong>17.</strong>
+Çift açan hiçbir oyuncu yoksa çift işlenemez.
+
+</div>
+
+
+
+<h3 class="sub-title">
+🃏 Yerdeki Okeyi Alma
+</h3>
+
+
+<div class="rule">
+
+<strong>18.</strong>
+Yere okey kullanılarak per veya çift açılmışsa,
+elinde okeye karşılık gelen taşı bulunan oyuncu okeyi alabilir.
+
+</div>
+
+
+<div class="rule">
+
+<strong>19.</strong>
+Yerdeki okeyi alabilmek için oyuncunun daha önce elini açmış olması gerekir.
+
+</div>
+
+
+<div class="rule">
+
+<strong>20.</strong>
+Okeyi almak için oyuncunun açılış sayısı 101'i tutmuyorsa okey alınamaz.
+
+</div>
+
+
+<div class="rule">
+
+<strong>21.</strong>
+Açılış sayısı 101'i tamamlıyorsa önce el yere açılır,
+daha sonra okey yerden alınabilir.
+
+</div>
+
+
+
+<h3 class="sub-title">
+📈 Katlamalı Oyun
+</h3>
+
+
+<div class="rule">
+
+<strong>22.</strong>
+Katlamalı eşli oyunda kendi eşinden daha yüksek açmak gerekmez.
+
+</div>
+
+
+<div class="rule">
+
+<strong>23.</strong>
+Ancak diğer takımdan sonra açıyorsan onların açtığından daha yüksek açmalısın.
+
+</div>
+
+
+<div class="example">
+
+<strong>Örnek:</strong>
+Diğer takım açmadıysa ve eşin 37 açtıysa,
+sen 35 açabilirsin.
+
+</div>
 
 </section>
 
 
-<section id="yeni-kurallar">
 
-    <h2>✨ Yeni Kurallar</h2>
 
-    <div class="rule">
-        <strong>1. Taş Dağıtımı:</strong>
-        Her oyuncuya 21 taş dağıtılır. Oyuna ilk başlayacak oyuncuya
-        1 taş fazladan verilir. İlk başlayan oyuncu taş çekmeden ilk elini oynar.
-    </div>
-
-    <div class="rule">
-        <strong>2. 12-13-1 Peri:</strong>
-        Oyunda 12-13-1 şeklinde per yapılamaz.
-    </div>
-
-    <div class="rule">
-        <strong>3. Yandan Taş Alma:</strong>
-        Yandan taş alan oyuncu elini açmak zorundadır.
-        Yandan aldığı taşı el açarken kullanmak zorundadır.
-        Ancak elinde bu taşın eşi varsa, el açarken eşini de kullanabilir.
-    </div>
-
-    <div class="rule">
-        <strong>4. Çift Açan Oyuncu:</strong>
-        Çift açan oyuncu kendi elindeki serileri yere açamaz.
-        Ancak diğer oyuncuların açtığı serilere taş işleyebilir.
-        Bir seferde en fazla 2 taş işleyebilir.
-    </div>
-
-    <div class="rule">
-        <strong>5. Çift İşleme:</strong>
-        Oyunda çift açmış bir oyuncu varsa diğer oyuncular
-        ellerindeki çiftleri çift açan oyuncunun çiftlerine işleyebilir.
-        Çift açan hiç kimse yoksa çift işlenemez.
-    </div>
-
-    <div class="rule">
-        <strong>6. Yerdeki Okeyi Alma:</strong>
-        Yere okey kullanılarak per veya çift açılmışsa,
-        elinde okeye karşılık gelen taşı bulunan oyuncu okeyi alabilir.
-        Ancak oyuncunun daha önce elini açmış olması gerekir.
-    </div>
-
-    <div class="example">
-        <strong>Önemli:</strong>
-        Okeyi almak için açılış sayınız 101'i tutmuyorsa okey alınamaz.
-        101'i tamamladıysanız önce elinizi yere açmalı,
-        daha sonra okeyi yerden almalısınız.
-    </div>
-
-    <div class="rule">
-        <strong>7. Elin Sona Ermesi:</strong>
-        Yerdeki taşların bitmesi veya bir oyuncunun elindeki taşların
-        bitmesiyle el sona erer.
-    </div>
-
-    <div class="rule">
-        <strong>8. El Sonu Ceza:</strong>
-        El sona erdiğinde her oyuncuya, elinde kalan taşların toplamı
-        kadar ceza yazılır.
-    </div>
-
-    <div class="rule">
-        <strong>9. Taşların Gösterilmesi:</strong>
-        Oyun bittiğinde tüm oyuncular ıstakalarındaki taşları
-        rakip oyunculara ve ceza tabelasını tutan oyuncuya gösterir.
-        Sayım yapıldıktan sonra taşlar yıkılır.
-    </div>
-
-    <div class="rule">
-        <strong>10. Eşlerden Birinin Bitmesi:</strong>
-        Eşlerden biri oyunu bitirirse diğer eşin cezası silinir.
-        Diğer eş elini açmamış olsa bile ceza almaz.
-    </div>
-
-    <div class="rule">
-        <strong>11. İşlek Taş Cezası:</strong>
-        Atılan taş yerdeki bir seriye işliyorsa,
-        bu taşı atan oyuncu ceza alır.
-        Ancak rakip oyuncular işlek olduğunu fark etmeden ortadan taş
-        çekmişse ceza verilmez.
-    </div>
-
-    <div class="example">
-        <strong>Önemli:</strong>
-        İşlek taşın cezalı olabilmesi için rakip oyuncunun
-        “İşlek!” demesi gerekir.
-    </div>
-
-    <div class="rule">
-        <strong>12. Okey Atma Cezası:</strong>
-        Okey her zaman işlek kabul edilir.
-        Bu nedenle yanlışlıkla okey atan oyuncu ceza alır.
-        Yere hiç taş açılmamış olsa bile okey atan oyuncuya
-        <strong>101 ceza puanı</strong> yazılır.
-    </div>
-
-    <div class="rule">
-        <strong>13. İşlek Taşın Alınması:</strong>
-        Yere atılan işlek taş diğer oyuncu tarafından alınabilir.
-    </div>
-
-</section>
-
+<!-- ================================================= -->
+<!-- 3. PUANLAMA -->
+<!-- ================================================= -->
 
 <section id="puanlama">
 
-    <h2>📊 Puanlama</h2>
+<h2>📊 Puanlama ve Cezalar</h2>
 
-    <div class="rule">
-        <strong>1. Seri açıldıysa:</strong>
-        Elde kalan taşların puanları toplanır.
-    </div>
 
-    <div class="rule">
-        <strong>2. Hiç açılmadıysa:</strong>
-        202 puan yazılır.
-    </div>
 
-    <div class="rule">
-        <strong>3. Çift açıldıysa:</strong>
-        Elde kalan taşların puanları toplanır ve 2 ile çarpılır.
-    </div>
+<h3 class="sub-title">
+🏁 Elin Sona Ermesi
+</h3>
 
-    <div class="rule">
-        <strong>4. 101 cezası:</strong>
-        İşlek taş atıldığında veya yanlış açıldığında 101 cezası uygulanır.
-    </div>
+
+<div class="rule">
+
+<strong>1.</strong>
+Yerdeki taşların bitmesi veya bir oyuncunun elindeki taşların bitmesiyle el sona erer.
+
+</div>
+
+
+
+<h3 class="sub-title">
+🧮 El Sonu Puanlama
+</h3>
+
+
+<div class="rule">
+
+<strong>2. Seri açıldıysa:</strong>
+Elde kalan taşların puanları toplanır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>3. Hiç açılmadıysa:</strong>
+202 puan yazılır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>4. Çift açıldıysa:</strong>
+Elde kalan taşların puanları toplanır ve 2 ile çarpılır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>5.</strong>
+El sona erdiğinde her oyuncuya,
+elinde kalan taşların toplamı kadar ceza yazılır.
+
+</div>
+
+
+
+<h3 class="sub-title">
+👥 Eşli Oyunda Ceza
+</h3>
+
+
+<div class="rule">
+
+<strong>6.</strong>
+Eşlerden biri oyunu bitirirse diğer eşin cezası silinir.
+
+</div>
+
+
+<div class="rule">
+
+<strong>7.</strong>
+Eşlerden biri bitmişse diğer eş elini açmamış olsa dahi ceza almaz.
+
+</div>
+
+
+
+<h3 class="sub-title">
+💯 101 Cezaları
+</h3>
+
+
+<div class="rule">
+
+<strong>8.</strong>
+İşlek taş atıldığında, şartlar oluşuyorsa 101 cezası uygulanır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>9.</strong>
+Yanlış el açıldığında 101 cezası uygulanır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>10.</strong>
+Yere atılan okey her zaman işlek olduğu için yanlışlıkla okey atıldığında
+101 cezası uygulanır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>11.</strong>
+Yere taş açılmamış olsa bile okey atan oyuncuya 101 ceza puanı yazılır.
+
+</div>
+
+
+<div class="rule">
+
+<strong>12.</strong>
+Daha önce açılmış elde yerdeki okey alınmış ve oyun bitmeden okey oyuncunun
+elinde kalmışsa 101 ceza yenilir.
+
+</div>
+
+
+
+<h3 class="sub-title">
+🧾 Oyun Sonu Hesaplama
+</h3>
+
+
+<div class="rule">
+
+<strong>13.</strong>
+Oyun bittiğinde tüm oyuncular ıstakalarındaki taşları rakip oyunculara
+ve ceza tabelasını tutan oyuncuya gösterir.
+
+</div>
+
+
+<div class="rule">
+
+<strong>14.</strong>
+Taşların sayımı yapıldıktan sonra taşlar yıkılır.
+
+</div>
 
 </section>
 
 
+
 <footer>
-    🀄 101 Okey Kuralları
+
+🀄 101 Okey Kuralları
+
 </footer>
+
 
 </body>
 </html>
