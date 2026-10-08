@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>101 Okey Kuralları</title>
 
     <style>
@@ -11,56 +12,49 @@
             font-family: Arial, sans-serif;
             background: #111111;
             color: white;
-            text-align: center;
         }
 
         header {
-            padding: 60px 20px 40px;
+            text-align: center;
+            padding: 55px 20px 35px;
         }
 
         h1 {
-            font-size: 42px;
+            font-size: 40px;
             margin-bottom: 10px;
         }
 
         header p {
-            color: #cccccc;
+            color: #bbbbbb;
             font-size: 18px;
         }
 
-        .sections {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 30px 20px;
-            flex-wrap: wrap;
+        .rules {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
         }
 
-        .card {
+        .rule {
             background: #1d1d1d;
-            border-radius: 20px;
-            padding: 30px;
-            width: 250px;
-            cursor: pointer;
-            transition: 0.3s;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            background: #292929;
+        .rule h2 {
+            font-size: 20px;
+            margin-top: 0;
         }
 
-        .card h2 {
-            font-size: 22px;
-        }
-
-        .card p {
-            color: #bbbbbb;
+        .rule p {
+            color: #dddddd;
+            line-height: 1.6;
         }
 
         footer {
-            margin-top: 60px;
-            padding: 20px;
+            text-align: center;
+            padding: 40px 20px;
             color: #777777;
         }
     </style>
@@ -73,21 +67,85 @@
         <p>101 Okey'i öğrenmenin en kolay yolu.</p>
     </header>
 
-    <main class="sections">
+    <main class="rules">
 
-        <div class="card">
-            <h2>🎮 Oyunun Kuralları</h2>
-            <p>Oyunun temel kurallarını öğren.</p>
+        <div class="rule">
+            <h2>1. Oyuncu Sayısı</h2>
+            <p>Oyun 4 kişi oynanır.</p>
         </div>
 
-        <div class="card">
-            <h2>🀄 El Açma</h2>
-            <p>El açma kurallarını öğren.</p>
+        <div class="rule">
+            <h2>2. El Açma</h2>
+            <p>
+                Seride 101 (33 yan 2), çiftte 5 çift 1 per olduğunda açılabilir.
+                Çift açılırken 5 çifte 1 per koymak zorunludur.
+                5 çiftten fazla çiftlerde isteğe bağlı olarak 1 per konulabilir.
+            </p>
         </div>
 
-        <div class="card">
-            <h2>📊 Puanlama</h2>
-            <p>Puanların nasıl hesaplandığını öğren.</p>
+        <div class="rule">
+            <h2>3. İşe Yarayan Taşı Alma Cezası</h2>
+            <p>
+                Seride, bizden önceki kişinin attığı taş işe yarıyorsa,
+                alınan taşın 10 katı kadar ceza yazılır.
+                Çiftte ise 20 katı kadar ceza yazılır.
+            </p>
+        </div>
+
+        <div class="rule">
+            <h2>4. Per Değiştirme</h2>
+            <p>
+                Perler yere indirilirken masaya değdikten sonra değiştirilemez.
+            </p>
+        </div>
+
+        <div class="rule">
+            <h2>5. Atılan Taşı Değiştirme</h2>
+            <p>
+                Atılan taş masaya değdikten sonra değiştirilemez.
+            </p>
+        </div>
+
+        <div class="rule">
+            <h2>6. Gösterge ve Çift Açma</h2>
+            <p>
+                Gösterge, çift açılırken 1 çift olarak kabul edilir.
+                Yanına kesinlikle başka taş konulmadan masadaki göstergenin
+                yanına konulur.
+            </p>
+        </div>
+
+        <div class="rule">
+            <h2>7. Eşli Oyunda Okey</h2>
+            <p>
+                Eşli oyunlarda okeyi pere koyarken takım arkadaşına kaş,
+                göz yapılmamalıdır. “Bu sende mi?” gibi sorular sorulmamalıdır.
+                Aksi durumda 101 ceza yenilir.
+            </p>
+        </div>
+
+        <div class="rule">
+            <h2>8. Elden Bitme</h2>
+            <p>
+                El 101 olmadığı takdirde elden bitilemez.
+            </p>
+        </div>
+
+        <div class="rule">
+            <h2>9. Yanlış El Açma</h2>
+            <p>
+                Yanlış el açılması durumunda biri fark ederse 101 ceza yenilir.
+                Kimse fark etmezse oyuna devam edilir.
+            </p>
+        </div>
+
+        <div class="rule">
+            <h2>10. Oyunu Yarıda Bırakma</h2>
+            <p>
+                Okey oynamaya gidildiğinde önemli bir durum olmadıkça oyun
+                yarıda bırakılıp gidilemez. 10 el de oynanılmalıdır.
+                Son el (11. el) hesap elidir; isteğe bağlı olarak puanlar yakınsa oynanılır.
+            </p>
         </div>
 
     </main>
